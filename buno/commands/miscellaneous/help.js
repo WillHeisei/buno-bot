@@ -23,11 +23,11 @@ module.exports.run = async (bot, message, args) => {
             message.delete();
             let embed = new Discord.RichEmbed()
             .setAuthor("Help Command", message.guild.iconURL)
-            .setColor(colour.red)
-            .setDescription(`${message.author.username} I have sent a list of commands to you through your DMs!`)
+            .setColor(colour.grey)
+            .setDescription(`**${message.author.username}** I have sent a list of commands to you through your DMs!`)
 
             let dEmbed = new Discord.RichEmbed()
-            .setColor(colour.red)
+            .setColor(colour.grey)
             .setThumbnail(bot.user.displayAvatarURL)
             .setTimestamp()
             .setThumbnail(bot.user.displayAvatarURL)
