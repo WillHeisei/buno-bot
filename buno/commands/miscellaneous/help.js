@@ -12,10 +12,10 @@ module.exports.run = async (bot, message, args) => {
         if(bot.commands.has(command)) {
             command = bot.commands.get(command);
             var sEmbed = new Discord.RichEmbed()
-            .setTitle("JP ||  Japan Service Helper")
-            .setColor(colour.red)
+            .setTitle("Buno's Service Helper")
+            .setColor(colour.grey)
             .setDescription(`The bot prefix is ${prefix}\n\n**Command:** ${command.config.name}\n**Description:** ${command.config.description || "No Description"}\n**Usage:** ${command.config.usage || "No Usage"}\n**Accessable by:** ${command.config.accessableby || "Verified"}\n**Aliases:** ${command.config.noalias || command.config.aliases}`)
-            .setFooter("Japan Service Helper", bot.user.displayAvatarURL)
+            .setFooter("Buno's Italian Restaurant", bot.user.displayAvatarURL)
             message.channel.send(sEmbed)
         }}
 
@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
             let embed = new Discord.RichEmbed()
             .setAuthor("Help Command", message.guild.iconURL)
             .setColor(colour.red)
-            .setDescription(`${message.author.username} check your DMs!`)
+            .setDescription(`${message.author.username} I have sent a list of commands to you through your DMs!`)
 
             let dEmbed = new Discord.RichEmbed()
             .setColor(colour.red)
@@ -33,7 +33,7 @@ module.exports.run = async (bot, message, args) => {
             .setThumbnail(bot.user.displayAvatarURL)
             .setDescription(`These are the available commands for this bot!\nThe bot prefix is ${prefix}`)
             .addField("Commands:", "`cat`, `dog`, `meme`, `help`, `announce`, `myinfo`, `serverinfo`")
-            .setFooter("Japan Service Helper", bot.user.displayAvatarURL)
+            .setFooter("Buno's Italian Restaurant", bot.user.displayAvatarURL)
             message.channel.send(embed);
             message.author.send(dEmbed)
         }
